@@ -20,7 +20,7 @@ export default class Booking extends Component {
   //   }));
   // }
   handleClick() {
-    Socket.emit('info', 'qr');
+    //Socket.emit('info', 'qr');
     //Socket.emit('notify', 'hello from the other side')
   }
   render() {
