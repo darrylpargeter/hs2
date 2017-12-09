@@ -13,23 +13,17 @@ export default class Booking extends Component {
     
     this.handleClick = this.handleClick.bind(this);
   }
-  componentDidMount() {
-    trigger((err, res) => this.setState({
-          redirect: true,
-          loc: res
-    }));
-  }
+  // componentDidMount() {
+  //   trigger((err, res) => this.setState({
+  //         redirect: true,
+  //         loc: res
+  //   }));
+  // }
   handleClick() {
     Socket.emit('info', 'qr');
     //Socket.emit('notify', 'hello from the other side')
   }
   render() {
-    if (this.state.redirect) {
-      console.log('redirect')
-      console.log(this.state.loc);
-      const str = `/${this.state.loc}`;
-      return <Redirect push to={str} />;
-    }
     return (
       <div className="booking-wrapper">
         <div className="title">Book tickets</div>

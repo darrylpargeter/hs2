@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Redirect, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Booking from './Booking';
 import Info from './Info';
 import Advert from './advert';
 import Qr from './qr';
-import { notification } from './socket';
+import { notification, trigger } from './socket';
 
 
 
@@ -13,11 +13,24 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     requestPermission();
+    this.state = { redirect: false, loc: null };
     notification((err, res) => {
       notifyMe(res);
     });
+    trigger((err, res) => {
+      console.log(res);
+      this.setState({
+      redirect: true,
+      loc: res
+    })});
   }
   render() {
+    console.log(location)  // eslint-disable-line 
+    if (this.state.redirect && location.pathname !== `/${this.state.loc}`) { // eslint-disable-line
+      console.log('here')
+      const str = `/${this.state.loc}`
+      return <Redirect push to={str} />
+    }
     return (
       <div className="App">
         <div className="navbar"><div className="navicon">
