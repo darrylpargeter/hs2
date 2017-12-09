@@ -50,7 +50,7 @@ function requestPermission() {
 function notifyMe(res) {
   // Let's check if the browser supports notifications
   if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js')
+  navigator.serviceWorker.register('https://evening-temple-59899.herokuapp.com/sw.js')
   .then(function(registration) {
     console.log('Registration successful, scope is:', registration.scope);
   }).catch(function(err) {
@@ -70,8 +70,12 @@ function notifyMe(res) {
     // } catch (e) {
       // if (e.name == "TypeError") {
         navigator.serviceWorker.ready.then(reg => {
-          reg.showNotification(reg.title, {
-            body: reg.body,
+          // const d = JSON.parse(reg);
+          console.log(reg);
+          const d = reg;
+          console.log(d);
+          reg.showNotification(d.title, {
+            body: d.body,
             vibrate: [200, 100, 200, 100, 200, 100, 200]
           });
         });
