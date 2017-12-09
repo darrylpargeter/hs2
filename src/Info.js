@@ -46,7 +46,7 @@ class Info extends Component {
         </div>
         <div className="sepsmall" ></div>
         <div className="info">Follow the:</div>
-        <div className="info green">Green Route</div>
+        <div className="info green">Blue Route</div>
         <div className="info">to</div>
         <div className="info highlight">Platform 8</div>
       </div>
