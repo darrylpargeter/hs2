@@ -10,12 +10,14 @@ export default class Booking extends Component {
   constructor(props) {
     super(props);
     this.state = { redirect: false, loc: null };
-    trigger((err, res) => this.setState({
-      redirect: true,
-      loc: res
-    }));
-
+    
     this.handleClick = this.handleClick.bind(this);
+  }
+  componentDidMount() {
+    trigger((err, res) => this.setState({
+          redirect: true,
+          loc: res
+    }));
   }
   handleClick() {
     Socket.emit('info', 'qr');

@@ -65,8 +65,12 @@ function notifyMe(res) {
     // } catch (e) {
       // if (e.name == "TypeError") {
         navigator.serviceWorker.ready.then(reg => {
-          reg.showNotification(reg.title, {
-            body: reg.body,
+          // const d = JSON.parse(reg);
+          console.log(reg);
+          const d = reg;
+          console.log(d);
+          reg.showNotification(d.title, {
+            body: d.body,
             vibrate: [200, 100, 200, 100, 200, 100, 200]
           });
         });
