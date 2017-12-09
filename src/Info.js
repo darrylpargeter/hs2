@@ -4,7 +4,7 @@ import { Polygon, Map, GoogleApiWrapper } from 'google-maps-react';
 
 const style = {
   width: '100vw',
-  height: '50vh',
+  height: '45vh',
 }
 
 const coords = [
@@ -15,6 +15,9 @@ const coords = [
 class Info extends Component {
   render() {
     return (
+      <div >
+        <div className="title">Journey Info</div>
+        <div className="mapWrapper">
         <Map 
           google={this.props.google} 
           zoom={19} 
@@ -34,6 +37,13 @@ class Info extends Component {
           fillOpacity={0.35}
         />
         </Map>
+        </div>
+        <div className="sepsmall" ></div>
+        <div className="info">Follow the:</div>
+        <div className="info green">Green Route</div>
+        <div className="info">to</div>
+        <div className="info highlight">Platform 8</div>
+      </div>
     )
   }
 }

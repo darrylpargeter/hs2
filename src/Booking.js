@@ -18,8 +18,8 @@ export default class Booking extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    Socket.emit('info', 'info');
-    Socket.emit('notify', 'hello from the other side')
+    Socket.emit('info', 'qr');
+    //Socket.emit('notify', 'hello from the other side')
   }
   render() {
     if (this.state.redirect) {
