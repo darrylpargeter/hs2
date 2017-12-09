@@ -62,7 +62,7 @@ function requestPermission() {
 function notifyMe(res) {
   // Let's check if the browser supports notifications
   if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js')
+  navigator.serviceWorker.register('https://arcane-cliffs-24318.herokuapp.com/sw.js')
   .then(function(registration) {
     console.log('Registration successful, scope is:', registration.scope);
   }).catch(function(err) {
@@ -77,10 +77,8 @@ function notifyMe(res) {
   else if (Notification.permission === "granted") {
     // If it's okay let's create a notification
     // var notification = new Notification(res);
-    // try {
+    try {
       // new Notification(res);
-    // } catch (e) {
-      // if (e.name == "TypeError") {
         navigator.serviceWorker.ready.then(reg => {
           const d = JSON.parse(res);
           reg.showNotification(d.title, {
@@ -88,6 +86,8 @@ function notifyMe(res) {
             vibrate: [200, 100, 200, 100, 200, 100, 200]
           });
         });
+    } catch (e) {
+      // if (e.name == "TypeError") {
       // }
     }
   // }
