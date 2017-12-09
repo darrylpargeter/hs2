@@ -56,8 +56,8 @@ function notifyMe(res) {
     // } catch (e) {
       // if (e.name == "TypeError") {
         navigator.serviceWorker.ready.then(reg => {
-          reg.showNotification('working', {
-            body: 'Buzz',
+          reg.showNotification(reg.title, {
+            body: reg.body,
             vibrate: [200, 100, 200, 100, 200, 100, 200]
           });
         });
