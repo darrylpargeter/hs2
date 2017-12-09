@@ -1,0 +1,16 @@
+:root {
+  --background: #2C3E50;
+  --button: #6DBCDB;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background);
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* flex-direction: column; */
+}
