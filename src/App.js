@@ -35,6 +35,7 @@ function requestPermission() {
 
 function notifyMe(res) {
   // Let's check if the browser supports notifications
+  navigator.serviceWorker.register('sw.js');
   if (!("Notification" in window)) {
     alert("This browser does not support system notifications");
   }
@@ -47,7 +48,9 @@ function notifyMe(res) {
       new Notification(res);
     } catch (e) {
       if (e.name == "TypeError") {
-        ServiceWorkerRegistration.showNotification(res)
+        navigator.serviceWorker.ready.then(reg => {
+          reg.showNotification(res);
+        });
       }
     }
   }
