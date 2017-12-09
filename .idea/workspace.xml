@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5845c6d-f9eb-4d51-88cc-1f7c02dc686d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/arrive.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/App.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/advert.js" afterPath="$PROJECT_DIR$/src/advert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/arrive.js" afterPath="$PROJECT_DIR$/src/arrive.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="App.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="651">
@@ -33,8 +30,15 @@
         <entry file="file://$PROJECT_DIR$/src/Booking.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="283">
-              <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="49" />
-              <folding />
+              <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="49" />
+              <folding>
+                <marker date="1512821577119" expanded="true" signature="240:1226" ph="{...}" />
+                <marker date="1512821577119" expanded="true" signature="263:336" ph="{...}" />
+                <marker date="1512821577119" expanded="true" signature="657:1224" ph="{...}" />
+                <marker date="1512821577119" expanded="true" signature="677:1214" ph="&lt;div/&gt;" />
+                <marker date="1512821577119" expanded="true" signature="805:952" ph="&lt;Dropdown/&gt;" />
+                <marker date="1512821577119" expanded="true" signature="961:1106" ph="&lt;Dropdown/&gt;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="arrive.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="arrive.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/arrive.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="28" lean-forward="false" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+            <state relative-caret-position="553">
+              <caret line="37" column="83" lean-forward="false" selection-start-line="37" selection-start-column="83" selection-end-line="37" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -146,8 +150,8 @@
         <option value="$PROJECT_DIR$/src/Info.js" />
         <option value="$PROJECT_DIR$/src/advert.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/arrive.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
+        <option value="$PROJECT_DIR$/src/arrive.js" />
       </list>
     </option>
   </component>
@@ -334,12 +338,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512812566534</updated>
-      <workItem from="1512812569193" duration="7942000" />
+      <workItem from="1512812569193" duration="8217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7942000" />
+    <option name="totallyTimeSpent" value="8217000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -428,8 +432,15 @@
     <entry file="file://$PROJECT_DIR$/src/Booking.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
-          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="49" />
-          <folding />
+          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="49" />
+          <folding>
+            <marker date="1512821577119" expanded="true" signature="240:1226" ph="{...}" />
+            <marker date="1512821577119" expanded="true" signature="263:336" ph="{...}" />
+            <marker date="1512821577119" expanded="true" signature="657:1224" ph="{...}" />
+            <marker date="1512821577119" expanded="true" signature="677:1214" ph="&lt;div/&gt;" />
+            <marker date="1512821577119" expanded="true" signature="805:952" ph="&lt;Dropdown/&gt;" />
+            <marker date="1512821577119" expanded="true" signature="961:1106" ph="&lt;Dropdown/&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -489,14 +500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/arrive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="28" lean-forward="false" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="651">
@@ -504,6 +507,14 @@
           <folding>
             <element signature="e#2337#2696#2" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arrive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="37" column="83" lean-forward="false" selection-start-line="37" selection-start-column="83" selection-end-line="37" selection-end-column="83" />
+          <folding />
         </state>
       </provider>
     </entry>

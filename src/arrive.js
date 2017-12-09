@@ -26,7 +26,7 @@ export default class Arrive extends Component {
     }
     return (
       <div className="">
-        <div className="title">Destination</div>
+        <div className="title">Train</div>
         <div className="sepsmall"></div>
         <img className="arrive" src="train.png"/>
         <div className="sepsmall"></div>
@@ -34,6 +34,8 @@ export default class Arrive extends Component {
         <div className="sepsmall"></div>
         <div className="info highlight">Departure in</div>
         <div className="info">4 Minutes</div>
+        <div className="sepsmall"></div>
+        <div className="details">Warm food will be passing you in <b>15 minutes</b></div>
       </div>
     )
   }
