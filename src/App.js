@@ -43,47 +43,35 @@ function requestPermission() {
 }
 
 function notifyMe(res) {
-
-  navigator.vibrate = navigator.vibrate ||
-    navigator.webkitVibrate ||
-    navigator.mozVibrate ||
-    navigator.msVibrate;
-
-  if(navigator.vibrate) {
-   navigator.vibrate(200); // vibrate for 200ms
+  // Let's check if the browser supports notifications
+  if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js')
+  .then(function(registration) {
+    console.log('Registration successful, scope is:', registration.scope);
+  }).catch(function(err) {
+    console.log('Service worker registration failed, error:', err);
+  });
+}
+  if (!("Notification" in window)) {
+    alert("This browser does not support system notifications");
   }
-  // // Let's check if the browser supports notifications
-  // navigator.serviceWorker.register('sw.js');
-  // if (!("Notification" in window)) {
-  //   alert("This browser does not support system notifications");
-  // }
-  //
-  // // Let's check whether notification permissions have already been granted
-  // else if (Notification.permission === "granted") {
-  //   // If it's okay let's create a notification
-  //   // var notification = new Notification(res);
-  //   // try {
-  //     // new Notification(res);
-  //   // } catch (e) {
-  //     // if (e.name == "TypeError") {
-  //       navigator.serviceWorker.ready.then(reg => {
-  //         reg.showNotification('working', {
-  //           body: 'Buzz',
-  //           vibrate: [200, 100, 200, 100, 200, 100, 200]
-  //         });
-  //       });
-  //     // }
-  //   }
-  // // }
-  //
-  // // Otherwise, we need to ask the user for permission
-  // else if (Notification.permission !== 'denied') {
-  //   Notification.requestPermission(function (permission) {
-  //     // If the user accepts, let's create a notification
-  //     if (permission === "granted") {
-  //       // var notification = new Notification("Hi there!");
-  //     }
-  //   });
+
+  // Let's check whether notification permissions have already been granted
+  else if (Notification.permission === "granted") {
+    // If it's okay let's create a notification
+    // var notification = new Notification(res);
+    // try {
+      // new Notification(res);
+    // } catch (e) {
+      // if (e.name == "TypeError") {
+        navigator.serviceWorker.ready.then(reg => {
+          reg.showNotification(reg.title, {
+            body: reg.body,
+            vibrate: [200, 100, 200, 100, 200, 100, 200]
+          });
+        });
+      // }
+    }
   // }
 
   // Finally, if the user has denied notifications and you
