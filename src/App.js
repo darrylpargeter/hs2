@@ -35,7 +35,14 @@ function requestPermission() {
 
 function notifyMe(res) {
   // Let's check if the browser supports notifications
+  if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js');
+  .then(function(registration) {
+    console.log('Registration successful, scope is:', registration.scope);
+  }).catch(function(err) {
+    console.log('Service worker registration failed, error:', err);
+  });
+}
   if (!("Notification" in window)) {
     alert("This browser does not support system notifications");
   }
