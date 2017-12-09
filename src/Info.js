@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Polygon, Map, GoogleApiWrapper } from 'google-maps-react';
 
 
 const style = {
