@@ -10,6 +10,7 @@ import { notification } from './socket';
 export default class App extends Component {
   constructor(props) {
     super(props);
+    requestPermission();
     notification((err, res) => {
       notifyMe(res);
     });
@@ -26,6 +27,12 @@ export default class App extends Component {
   }
 }
 
+function requestPermission() {
+  if("Notification" in window) {
+    Notification.requestPermission();
+  }
+}
+
 function notifyMe(res) {
   // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
@@ -35,7 +42,6 @@ function notifyMe(res) {
   // Let's check whether notification permissions have already been granted
   else if (Notification.permission === "granted") {
     // If it's okay let's create a notification
-    console.log(res);
     var notification = new Notification(res);
   }
 
