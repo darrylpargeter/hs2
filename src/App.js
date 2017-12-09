@@ -44,16 +44,19 @@ function notifyMe(res) {
   else if (Notification.permission === "granted") {
     // If it's okay let's create a notification
     // var notification = new Notification(res);
-    try {
-      new Notification(res);
-    } catch (e) {
-      if (e.name == "TypeError") {
+    // try {
+      // new Notification(res);
+    // } catch (e) {
+      // if (e.name == "TypeError") {
         navigator.serviceWorker.ready.then(reg => {
-          reg.showNotification(res);
+          reg.showNotification('working', {
+            body: 'Buzz',
+            vibrate: [200, 100, 200, 100, 200, 100, 200]
+          });
         });
-      }
+      // }
     }
-  }
+  // }
 
   // Otherwise, we need to ask the user for permission
   else if (Notification.permission !== 'denied') {
