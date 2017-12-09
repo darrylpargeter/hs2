@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import Booking from './Booking';
 import Info from './Info';
+import Advert from './advert';
 import Qr from './qr';
 import { notification } from './socket';
 
@@ -29,6 +30,7 @@ export default class App extends Component {
           <Route exact path='/' component={Booking} />
           <Route path='/info' component={Info} />
           <Route path='/qr' component={Qr} />
+          <Route path='/advert' component={Advert} />
         </Switch>
         </div>
       </div>
@@ -53,7 +55,7 @@ function notifyMe(res) {
   });
 }
   if (!("Notification" in window)) {
-    alert("This browser does not support system notifications");
+    // alert("This browser does not support system notifications");
   }
 
   // Let's check whether notification permissions have already been granted
