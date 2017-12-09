@@ -5,6 +5,7 @@ import Booking from './Booking';
 import Info from './Info';
 import Advert from './advert';
 import Arrive from './arrive';
+import Final from './final';
 import Qr from './qr';
 import { notification, trigger } from './socket';
 
@@ -46,7 +47,9 @@ export default class App extends Component {
           <Route path='/advert' component={Advert} />
           <Route path='/arrive' component={Arrive} />
           <Route path='/null' component={Booking} />
+          <Route path='/final' component={Final} />
         </Switch>
+
         </div>
       </div>
     );
