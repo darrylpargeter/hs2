@@ -4,6 +4,7 @@ import './App.css';
 import Booking from './Booking';
 import Info from './Info';
 import Advert from './advert';
+import Arrive from './arrive';
 import Qr from './qr';
 import { notification } from './socket';
 
@@ -31,6 +32,8 @@ export default class App extends Component {
           <Route path='/info' component={Info} />
           <Route path='/qr' component={Qr} />
           <Route path='/advert' component={Advert} />
+          <Route path='/arrive' component={Arrive} />
+          <Route path='/null' component={Booking} />
         </Switch>
         </div>
       </div>

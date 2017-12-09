@@ -6,7 +6,7 @@ import { Redirect } from 'react-router-dom';
 
 import { Socket, trigger } from './socket';
 
-export default class Advert extends Component {
+export default class Arrive extends Component {
   constructor(props) {
     super(props);
     this.state = { redirect: false, loc: null };
@@ -26,17 +26,14 @@ export default class Advert extends Component {
     }
     return (
       <div className="">
-        <div className="title">Still time</div>
+        <div className="title">Destination</div>
         <div className="sepsmall"></div>
-        <img className="clock" src="clock.png"/>
+        <img className="arrive" src="train.png"/>
         <div className="sepsmall"></div>
-        <div className="details">You still have 24mins until the your train departs, why not grab a bite to eat.</div>
+        <div className="details">Your seat is <b>B3</b></div>
         <div className="sepsmall"></div>
-        <div className="info">25% off Cool Brunch:</div>
-        <div className="info highlight">4HF7E</div>
-        <div className="sepsmall"></div>
-        <div className="info">£1 Burger @ McDribbles:</div>
-        <div className="info highlight">F8G4R</div>
+        <div className="info highlight">Departure in</div>
+        <div className="info">4 Minutes</div>
       </div>
     )
   }

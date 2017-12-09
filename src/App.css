@@ -210,4 +210,17 @@ input{
     background: rgba(255,255,255,0.2);
     color: white;
     padding: 2vh;
+    box-sizing: border-box;
+}
+
+.clock{
+    margin-top:1vh;
+    width: 30vw;
+    height: 30vw;
+}
+
+.arrive{
+    margin-top:1vh;
+    width: 50vw;
+    height: 50vw;
 }
