@@ -29,7 +29,9 @@ export default class Booking extends Component {
       return <Redirect push to={str} />;
     }
     return (
-      <div className="Cool-background booking-wrapper">
+      <div className="booking-wrapper">
+        <div className="title">Book tickets</div>
+        <div className="sep"></div>
         <Dropdown 
           type={'current'}
           opts={

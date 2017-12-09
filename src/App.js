@@ -17,10 +17,17 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="navbar"><div class="navicon">
+          <div className="naviconbar"></div>
+          <div className="naviconbar"></div>
+          <div className="naviconbar"></div>
+        </div></div>
+        <div className="content Cool-background">
         <Switch>
           <Route exact path='/' component={Booking} />
           <Route path='/info' component={Info} />
         </Switch>
+        </div>
       </div>
     );
   }
